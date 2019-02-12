@@ -20,4 +20,18 @@ names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(url, names=names)
 print('dataset load successfully')
 
+#shape
+print('\n$$shape$$')
+print(dataset.shape)
 
+#head
+print('\n$$head$$')
+print(dataset.head(20))
+
+#descriptions
+print('\n$$descriptions$$')
+print(dataset.describe())
+
+#class distribution
+print('\n$$class distribution$$')
+print(dataset.groupby('class').size())
