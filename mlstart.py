@@ -35,3 +35,18 @@ print(dataset.describe())
 #class distribution
 print('\n$$class distribution$$')
 print(dataset.groupby('class').size())
+
+#box and whisker plots
+print('\n$$box and whisker plot$$')
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
+
+#histograms
+print('\n$$histograms$$')
+dataset.hist()
+plt.show()
+
+#scatter plot matrix
+print('\n$$scatter plot matrix')
+scatter_matrix(dataset)
+plt.show()
